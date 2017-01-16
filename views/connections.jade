@@ -1,0 +1,36 @@
+extends layout/base
+
+block style
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+block script
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  script(src='/javascripts/global.js')
+  
+block content
+    section.content-header 
+      h1 
+        | Connection List
+        small it all starts here
+      ol.breadcrumb 
+        li 
+          a(href='#') 
+            i.fa.fa-dashboard
+            | Level 
+        li.active Here 
+      
+    section.content
+      // USER LIST
+      //h2 Connetion List
+      #userList
+          table
+              thead
+                  th id
+                  th _id
+                  th ackPacket_ack_num
+                  th synAckPacket_sequence_num
+                  th synPacket_sequence_num
+                  th ip_dest_addr
+                  th ip_source_addr
+              tbody
+      // USER LIST
